@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Practice</title>
 </head>
 
 <body>
@@ -16,11 +16,45 @@
     <button onclick="displayDate()">show an alert and date</button>
     <p id="showDate"></p>
 
+    <button onclick="showAlert()">show alert</button>
+    <div></div>
+    <br>
+    <button onclick="showConfirm()">delete all</button>
+    <div></div>
+    <br>
+    <button onclick="showPromt()">write something</button>
+    <div></div>
+    <br>
+    <button onclick="newTab()">New Tab</button>
+
+    <div></div>
+    <br>
+    <button onclick="showDomain()">show domain</button>
+    <p id="domain"> domain</p>
     <script>
+
         function displayDate() {
-            alert("This is js");
             document.getElementById('showDate').innerHTML = Date();
         }
+    </script>
+    <script>
+        function showAlert() { alert("This is js"); }
+        function showConfirm() {
+            let isConfirm = confirm("Are you sure to deete all things?");
+            isConfirm ? document.write("") : null;
+        }
+        function showPromt() {
+            let result = prompt("Write Something");
+            result != null ? document.write(result) : null;
+        }
+        function newTab() {
+            open();
+        }
+        function showDomain() {
+            let domain = document.domain;
+            document.getElementById("domain").innerHTML = domain;
+        }
+
     </script>
     <!-- <script src="./js/arrays.js"></script> -->
     <!-- <script src="./js/interpolation.js"></script> -->
