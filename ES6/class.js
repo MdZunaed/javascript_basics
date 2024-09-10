@@ -9,7 +9,6 @@ class Computer {
         this.ssd = ssd;
     };
 
-
     runComputer() {
         console.log(`Starting PC with ${this.cpu}, ${this.gpu}, ${this.ram} ram, & ${this.ssd} ssd`);
     }
@@ -26,9 +25,15 @@ let zunaedsComputer = new Computer({ cpu: "Ryzen 5500", gpu: "GTX 1650", ram: "1
 // console.log(Computer.motherboardModel);
 
 class Laptop extends Computer {
+
     webcam = "25 mp";
+
     showCpuName() {
         console.log(this.cpu);
+    }
+
+    useParentClassMethod() {
+        super.runComputer();
     }
 }
 
