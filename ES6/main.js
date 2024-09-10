@@ -28,3 +28,21 @@ for (property in laptop) {
     //console.log(property + ':' + laptop[property]);
 }
 
+function normallFunction(){}
+function parametersFunction(a,b){
+    sum = a+b;
+}
+function restParameterFunction(...array){
+    console.log(array);
+    console.log(array[1]);
+}
+
+function returnFuntion(a,b){
+    multiply = a*b;
+    sum = a+b;
+    division = a/b;
+    return sum;
+}
+
+//console.log(returnFuntion(3,6));
+
